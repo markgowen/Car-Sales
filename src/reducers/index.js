@@ -25,9 +25,10 @@ export const reducer = (state = initialState, action) => {
           })
           const newState = {
               ...state,
+              additionalPrice: addedFeature.price,
               car: {
                 ...state.car,
-                price: state.car.price + addedFeature.price,
+                // price: state.car.price + addedFeature.price,
                 features: [
                     ...state.car.features,
                     addedFeature
